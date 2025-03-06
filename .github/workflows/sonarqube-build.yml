@@ -19,6 +19,12 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+        with:
+          args: >
+            -Dsonar.projectKey="Santhosh-Hanabi_DeepSeek-VL2_ff3ed166-3e45-4377-b7f9-9c2efcb908f4"
+            -Dsonar.projectName="DeepSeek-VL2"
+            -Dsonar.projectVersion=1.0
+            -Dsonar.sources=.
       # If you wish to fail your job when the Quality Gate is red, uncomment the
       # following lines. This would typically be used to fail a deployment.
       # - uses: SonarSource/sonarqube-quality-gate-action@v1
